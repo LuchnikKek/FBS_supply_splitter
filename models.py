@@ -11,7 +11,6 @@ class Order(BaseModel):
     rid: str
     created_at: str
     warehouse_id: int
-    supply_id: str
     offices: List[str] | None
     address: None
     user: None
@@ -34,7 +33,7 @@ class Supply(BaseModel):
     id: str
     done: bool
     created_at: str
-    closed_at: str
-    scan_dt: str
+    closed_at: str | None
+    scan_dt: str | None
     name: str
     cargo_type: int
