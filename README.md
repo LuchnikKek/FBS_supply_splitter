@@ -1,11 +1,11 @@
 # WB FBS Supply Splitter
 
-Small Python-script. On startup splits all FBS orders into pre-created supplies. 
+Small Python-script. On startup splits all FBS orders by supplies with same names.
+Creates supplies if needed.
 
 ## Installation
-1. Set ARTICLE_TO_SUPPLY_NAME dict in **_./constants.py_** to your values.
-2. Paste your TOKEN from WB API into **_.env.example_** and rename it to just **_.env_**.
-3.  ```bash
+1. Paste your TOKEN from WB API into **_.env.example_** and rename it to just **_.env_**.
+2. ```bash
     docker build -t sup_former .
     ```
 

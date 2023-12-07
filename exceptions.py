@@ -2,6 +2,16 @@ class ApiException(Exception):
     pass
 
 
+class OrdersListGettingException(ApiException):
+    def __init__(self, request_result):
+        self.request_result = request_result
+        request_result_text = request_result.text
+        super().__init__(
+            f'Список заказов не получен.\n'
+            f'{request_result_text=}'
+        )
+
+
 class SuppliesListGettingException(ApiException):
     def __init__(self, request_result):
         self.request_result = request_result
